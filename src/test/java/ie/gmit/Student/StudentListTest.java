@@ -25,7 +25,7 @@ public class StudentListTest {
         studentList.addStudent(newStudent4);
     }
 
-    @DisplayName("Testing Student List")
+    @DisplayName("Testing Student List True")
     @Test
     public void testStudentNameTrue(){
         assertEquals(newStudent1, studentList.searchStudent(newStudent1.getStudentName()));
@@ -34,6 +34,7 @@ public class StudentListTest {
         assertEquals(newStudent4, studentList.searchStudent(newStudent4.getStudentName()));
     }
 
+    @DisplayName("Testing Student List False")
     @Test
     public void testStudentNameFalse(){
         assertNull(studentList.searchStudent("Sgfdsgean"));

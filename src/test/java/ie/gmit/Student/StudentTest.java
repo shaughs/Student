@@ -25,7 +25,7 @@ public class StudentTest {
         assertEquals("Invalid Name",e.getMessage());
     }
 
-    @DisplayName("Adding two numbers")
+    @DisplayName("Testing Email Address")
     @Test
     public void testStudentemail(){
         Exception e = assertThrows(IllegalArgumentException.class, () -> new Student("Sean",null));
@@ -35,12 +35,13 @@ public class StudentTest {
         assertEquals("Invalid Email Address",e.getMessage());
     }
 
+    @DisplayName("Testing Name Correct")
     @Test
     public void testNamecorrect(){
         assertEquals("Sean",student.getStudentName());
     }
 
-    @DisplayName("Adding two numbers")
+    @DisplayName("Testing Email Correct")
     @Test
     public void testEmailcorrect(){
         assertEquals("Test@gmail.com",student.getStudentEmail());
